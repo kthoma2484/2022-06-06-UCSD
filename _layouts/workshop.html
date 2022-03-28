@@ -1,0 +1,75 @@
+---
+---
+<!DOCTYPE html>
+<!--
+  Use this layout for the home page for the workshop website.
+  Use 'page.html' for other pages.
+-->
+<html>
+  <head>
+    <title>UCSD {{ page.eventtitle }}</title>
+    {% include header.html %}
+    <meta name="slug" content="{{site.github.project_title}}" />
+    <meta name="startdate" content="{{page.startdate}}" />
+    <meta name="enddate" content="{{page.enddate}}" />
+    <meta name="country" content="{{page.country}}" />
+    <meta name="venue" content="{{page.venue}}" />
+    <meta name="address" content="{{page.address}}" />
+    <meta name="latlng" content="{{page.latlng}}" />
+    <meta name="language" content="{{page.language}}" />
+    <meta name="eventbrite" content="{{page.eventbrite}}" />
+    <meta name="instructor" content="{{page.instructor|join:'|'}}" />
+    <meta name="helper" content="{{page.helper|join:'|'}}" />
+    <meta name="contact" content="{{page.contact}}" />
+    <meta name="eventtitle" content="{{page.eventtitle}}" />
+
+    {% if page.redirect %}
+    <meta http-equiv="refresh" content="0; url={{page.redirect}}" />
+    {% endif %}
+  </head>
+  <body class="workshop">
+    <div class="container card">
+      <div>
+      {% include banner.html %}
+      </div>
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <h2>{{page.eventtitle}}</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <p><strong>Date: </strong>{{page.humandate}}</p>
+                <p><strong>Time: </strong>{{page.humantime}}</p>
+                <p><strong>Venue: </strong>{{page.venue}}</p>
+                <p></p>
+              </div>
+              <div class="col-md-6">
+                <p>
+                <strong>Instructors:</strong>
+                {% if page.instructor %}
+                {{page.instructor | join: ', ' %}}
+                {% else %}
+                to be announced.
+                {% endif %}
+                </p>
+                {% if page.helper %}
+                <p>
+                <strong>Helpers:</strong>
+                {{page.helper | join: ', ' %}}
+                </p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          {{content}}
+        </div>
+      </div>
+      {% include footer.html %}
+    </div>
+    {% include javascript.html %}
+  </body>
+</html>

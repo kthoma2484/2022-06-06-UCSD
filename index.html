@@ -1,0 +1,410 @@
+---
+layout: workshop
+root: .
+eventtitle: "Carpentries Bootcamp: Intro. to R and Version Control w/ Git" # enter name of the event here
+venue: "UC San Diego"      # brief name of host site without address (e.g., "Euphoric State University")
+address: "Event Room (G1E), Geisel Library, 9500 Gilman Drive, La Jolla, CA"    # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
+country: "us"    # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "en"   # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
+latlng: "32.885125,-117.241173"     # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
+humandate: "April 11-14, 2022"  # human-readable date (e.g., "Feb 17-18, 2020")
+humantime: "9:00am-12:00pm PT"  # human-readable time (e.g., "9:00 am - 4:30 pm")
+startdate: "2022-04-11"  # use YYYY-MM-DD format like "2015-01-01"
+enddate: "2022-04-14"  # use YYYY-MM-DD format like" 2015-01-02"
+days: null
+instructor: ["TBD", "TBD"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Reid Otsuji (Library)", "Kimberly Thomas(Research ITS)"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+contact: "kkt008@ucsd.edu or rotsuji@ucsd.edu "    # contact email address for workshop organizer, such as "grace@hopper.org"
+etherpad: "TBD" # optional (insert the URL for your Etherpad if you're using one)
+eventbrite:       # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB")
+---
+<!--
+  HEADER (above)
+
+  Edit the values in the block above to be appropriate for your workshop.
+  If the value is not 'true', 'false', 'null', or a number, please use
+  double quotation marks around the value, unless specified otherwise.
+  And run 'tools/check' *before* committing to make sure that changes are good.
+-->
+
+<!--
+  EVENTBRITE
+
+  This block includes the Eventbrite registration widget if
+  'eventbrite' has been set in the header.  You can delete it if you
+  are not using Eventbrite, or leave it in, since it will not be
+  displayed if the 'eventbrite' field in the header is not set.
+-->
+{% if page.eventbrite %}
+<iframe
+  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
+  frameborder="0"
+  width="100%"
+  height="248px"
+  scrolling="auto">
+</iframe>
+{% endif %}
+
+<h2 id="general">General Information</h2>
+
+<!--
+  INTRODUCTION
+
+  Edit the general explanatory paragraph below if you want to change
+  the pitch.
+-->
+<p>
+  <a href="{{site.swc_site}}">Software Carpentry</a>
+  aims to help researchers get their work done
+  in less time and with less pain
+  by teaching them basic research computing skills.
+  This hands-on workshop will cover basic concepts and tools used with the R programming language and version control with Git.
+  Participants will be encouraged to help one another
+  and to apply what they have learned to their own research problems.
+</p>
+
+<p>
+  <em>
+    For more information on what we teach and why,
+    please see our paper
+    "<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a>".
+  </em>
+</p>
+
+</hr>
+<!--
+  AUDIENCE
+
+  Explain who your audience is.  (In particular, tell readers if the
+  workshop is only open to people from a particular institution.
+-->
+<p id="who">
+  <strong>Who:</strong>
+  This workshop is open to UCSD students, staff, and faculty.
+</p>
+<p>
+  <strong>You don't need to have any previous knowledge of programming or the tools presented in the workshop to attend.  A laptop is required for each session.</strong>
+</p>
+
+<!--
+  LOCATION
+
+  This block displays the address and links to maps showing directions
+  if the latitude and longitude of the workshop have been set.  You
+  can use http://itouchmap.com/latlong.html to find the lat/long of an
+  address.
+-->
+{% if page.latlng %}
+<p id="where">
+  <strong>Where:</strong>
+  {{page.address}}.
+</p>
+{% endif %}
+
+<!--
+  SPECIAL REQUIREMENTS
+
+  Modify the block below if there are any special requirements.
+-->
+<p id="requirements">
+  <strong>Requirements:</strong> Participants must bring a laptop with
+  a few specific software packages installed (listed
+  <a href="#setup">below</a>).
+</p>
+
+<!--
+  CONTACT EMAIL ADDRESS
+
+  Display the contact email address set in the header.  If an address
+  isn't set in the header, the Software Carpentry admin address is
+  used.
+-->
+<p id="contact">
+  <strong>Contact</strong>:
+  Please mail
+  {% if page.contact %}
+    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
+  {% else %}
+    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
+  {% endif %}
+  for more information.
+</p>
+
+<p id="certificate">
+<strong>Assessment</strong>:
+A Co-Curricular of Record activity recognition will be given to the student who:
+</p>
+
+<ul>
+<li>Attend and participate in all sessions</li>
+<li>Pass all workshop quizzes</li>
+</ul>
+<p>
+For more information on the UC San Diego Co-Curricular of Record (CCR), please visit the <a href="https://elt.ucsd.edu/ccr/index.html">UCSD Engaged Learning Tools Co-Curricular Record page</a>.
+</p>
+<hr/>
+
+<!-- Below is the official Carpentries Code of Conduct information -->
+
+<h2 id="code-of-conduct">Code of Conduct</h2>
+
+<p>
+Everyone who participates in Carpentries activities is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>. This document also outlines how to report an incident if needed.
+</p>
+
+<p class="text-center">
+  <a href="https://goo.gl/forms/KoUfO53Za3apOuOK2">
+    <button type="button" class="btn btn-info">Report a Code of Conduct Incident</button>
+  </a>
+</p>
+
+<hr/>
+
+<!-- Below is the official Carpentries Survey links -->
+
+<h2 id="surveys">Surveys</h2>
+<p>Please be sure to complete these surveys before and after the workshop.</p>
+{% if site.carpentry == "incubator" %}
+<p><a href="{{ site.incubator_pre_survey }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.incubator_post_survey }}">Post-workshop Survey</a></p>
+{% elsif site.incubator_pre_survey or site.incubator_post_survey %}
+<div class="alert alert-danger">
+WARNING: you have defined custom pre- and/or post-survey links for
+a workshop not configured for The Carpentries Incubator
+(the value of `curriculum` is not set to `incubator` in `_config.yml`).
+Please comment out the `incubator_pre_survey` and `incubator_post_survey` fields
+in `_config.yml` or, if this workshop is teaching a lesson in the Incubator,
+change the value of `carpentry` to `incubator`.
+</div>
+{% else %}
+<p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
+{% endif %}
+
+<hr/>
+
+<!--
+  SCHEDULE
+
+  Show the workshop's schedule.  
+-->
+<h2 id="schedule">Schedule</h2>
+<div class="row">
+  <div>
+    <table class="table">
+     <thead><tr> <th><strong>Date</strong></th> <th><strong>Session</strong></th> <th><strong>Topics</strong></th> </tr></thead>
+     <tbody>
+      <tr><td>April 11</td><td>Introduction to R - Session 1</td><td>Intro to R & RStudio - basics, data structures, and data import/export</td></tr>
+      <tr><td>April 12</td><td>Introduction to R - Session 2</td><td>dplyr and tidyverse</td></tr>
+      <tr><td>April 13</td><td>Introduction to R - Session 3</td><td>Plotting with ggplot2 and knitr</td></tr>
+      <tr><td></td><td>Quiz</td><td> Due next session; posted on Canvas</td></tr>
+      <tr><td>April 14</td><td>Version Control with Git</td><td>Introduction to Git, creating a repository, tracking changes, and collaborating</td></tr>
+     </tbody></table>
+  </div>
+</div>
+</hr>
+<!--
+  ETHERPAD
+
+  At `_misc/etherpad.txt` you will find a template for the etherpad.
+
+  Display the Etherpad for the workshop.  You can set this up in
+  advance or on the first day; either way, make sure you push changes
+  to GitHub after you have its URL.  To create an Etherpad, go to
+
+      http://pad.software-carpentry.org/YYYY-MM-DD-site
+
+  where 'YYYY-MM-DD-site' is the identifier for your workshop,
+  e.g., '2015-06-10-esu'.
+-->
+<h2 id="curriculum">Curriculum</h2>
+<!-- R specific data information begins -->
+<p id = "curriculum">
+For this workshop we will be referencing the <a href="https://swcarpentry.github.io/r-novice-gapminder/">R for Reproducible Scientific Analysis</a> and <a href="https://swcarpentry.github.io/git-novice/">Version Control with Git</a> Carpentries curricula. 
+</p>
+
+<h2 id="datasect">Data</h2>
+<!-- R specific data information begins -->
+<p id = "data">
+We will be using the 5 year <a href="http://www.gapminder.org/data/">gapminder data</a>. You can go ahead and set up a RStudio project and download the data following these <a href="newproject.html">instructions</a>. The CSV can be downloaded from <a href="https://raw.githubusercontent.com/resbaz/r-novice-gapminder-files/master/data/gapminder-FiveYearData.csv">here</a>.
+</p>
+<!-- R specific data information ends -->
+
+</hr>
+
+{% if page.etherpad %}
+<p id="etherpad">
+  <strong>HackMD: </strong>We will use HackMD for taking notes, and sharing URLs and bits of code. The link for the HackMD etherpad will be provide at the start of each workshop session.
+</p>
+{% endif %}
+
+<hr/>
+<!--
+  SETUP
+
+  Delete irrelevant sections from the setup instructions.  Each
+  section is inside a 'div' without any classes to make the beginning
+  and end easier to find.
+
+  This is the other place where people frequently make mistakes, so
+  please preview your site before committing, and make sure to run
+  'tools/check' as well.
+-->
+
+<h2 id="setup">Setup</h2>
+
+<p>
+  To participate in this workshop, you will need
+  access to the software described below. In addition, you will
+  need an up-to-date web browser.
+</p>
+<!-- Start of 'R' section. -->
+<div id="r">
+  <h3>R</h3>
+  <p>
+    <a href="https://www.r-project.org">R</a> is a programming language
+    that is especially powerful for data exploration, visualization, and
+    statistical analysis. To interact with R, we use
+    <a href="https://www.rstudio.com/">RStudio</a>.
+  </p>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event,'RWindows')">Windows</button>
+    <button class="tablinks" onclick="openTab(event,'RMacOS')">MacOS</button>
+    <button class="tablinks" onclick="openTab(event,'RLinux')">Linux</button>
+  </div>
+  <div id="RWindows" class="tabcontent">
+    <p>
+      Install R by downloading and running
+      <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
+      from <a href="https://cran.r-project.org/index.html">CRAN</a>.
+      Also, please install the
+      <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+      Note that if you have separate user and admin accounts, you should run the
+      installers as administrator (right-click on .exe file and select "Run as
+      administrator" instead of double-clicking). Otherwise problems may occur later,
+      for example when installing R packages.
+    </p>
+    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/q0PjTAylwoU">SWC R Install Windows</a></p>
+  </div>
+  <div id="RMacOS" class="tabcontent">
+    <p>
+      Install R by downloading and running
+      <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
+      from <a href="https://cran.r-project.org/index.html">CRAN</a>.
+      Also, please install the
+      <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+    </p>
+    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/5-ly3kyxwEg">SWC R Install Mac</a></p>     
+  </div>
+  <div id="RLinux" class="tabcontent">
+    <p>
+      Instructions for R installation on various Linux platforms (debian,
+      fedora, redhat, and ubuntu) can be found at
+      <https://cran.r-project.org/bin/linux/>. These will instruct you to
+      use your package manager (e.g. for Fedora run
+      <code>sudo dnf install R</code> and for Debian/Ubuntu, add a ppa
+      repository and then run <code>sudo apt-get install r-base</code>).
+      Also, please install the
+      <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+    </p>
+  </div>
+</div>
+
+<!-- End of 'R' section. -->
+
+<!-- Start of Git section. -->
+<div id="git">
+  <h3>Git</h3>
+  <p>
+    Git is a version control system that lets you track who made changes
+    to what when and has options for easily updating a shared or public
+    version of your code
+    on <a href="https://github.com/">github.com</a>. You will need a
+    <a href="https://help.github.com/articles/supported-browsers/">supported
+    web browser</a>.
+  </p>
+  <p>
+    You will need an account at <a href="https://github.com/">github.com</a>
+    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
+    you to create a GitHub account if you don't have one already.
+    Please consider what personal information you'd like to reveal. For
+    example, you may want to review these
+    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
+      for keeping your email address private</a> provided at GitHub.
+  </p>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event,'GitWindows')">Windows</button>
+    <button class="tablinks" onclick="openTab(event,'GitMacOS')">MacOS</button>
+    <button class="tablinks" onclick="openTab(event,'GitLinux')">Linux</button>
+  </div>
+    <div id="GitWindows" class="tabcontent">
+      <p>
+        Git should be installed on your computer as part of your Bash
+        install (see the
+        <a href="#shell">Shell installation instructions</a>).
+      </p>
+    </div>
+    <div id="GitMacOS" class="tabcontent">
+      <p>
+        <strong>For macOS</strong>, install Git for Mac
+        by downloading and running the most recent "mavericks" installer from
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
+        Because this installer is not signed by the developer, you may have to
+        right click (control click) on the .pkg file, click Open, and click
+        Open on the pop up window.
+        After installing Git, there will not be anything in your <code>/Applications</code> folder,
+        as Git is a command line program.
+        <strong>For older versions of OS X (10.5-10.8)</strong> use the
+        most recent available installer labelled "snow-leopard"
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
+      </p>
+      <p><strong>Video Tutorial: </strong><a href="https://youtu.be/9LQhwETCdwY">SWC Install Shell, Git, and Nano on Mac</a></p>
+    </div>
+    <div id="GitLinux" class="tabcontent">
+      <p>
+      If Git is not already available on your machine you can try to
+      install it via your distro's package manager. For Debian/Ubuntu run
+      <code>sudo apt-get install git</code> and for Fedora run
+      <code>sudo dnf install git</code>.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- End of Git section. -->
+
+
+<!-- hiding SQL Lite insrtuctions
+<div id="sql"> Start of 'SQLite' section.
+  <h3>SQLite</h3>
+  <p>
+    SQL is a specialized programming language used with databases.  We
+    use a simple database manager called
+    <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
+  </p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h4 id="sql-windows">Windows</h4>
+      <p>
+        The <a href="{{site.swc_installer}}">Software Carpentry Windows Installer</a>
+        installs SQLite for Windows.
+        If you used the installer to configure nano, you don't need to run it again.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="sql-macosx">Mac OS X</h4>
+      <p>
+        SQLite comes pre-installed on Mac OS X.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="sql-linux">Linux</h4>
+      <p>
+        SQLite comes pre-installed on Linux.
+      </p>
+    </div>
+  </div>
+
+</div> End of 'SQLite' section. -->
+<!--test note-->
