@@ -3,20 +3,19 @@ layout: workshop
 root: .
 eventtitle: "Carpentries Bootcamp: Intro. to R and Version Control w/ Git" # enter name of the event here
 venue: "UC San Diego"      # brief name of host site without address (e.g., "Euphoric State University")
-address: "Event Room (G1E), Geisel Library, 9500 Gilman Drive, La Jolla, CA"    # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
+address: "Virtual (via Zoom)"    # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
 country: "us"    # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "en"   # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: "32.885125,-117.241173"     # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
-humandate: "April 11-14, 2022"  # human-readable date (e.g., "Feb 17-18, 2020")
-humantime: "9:00am-12:00pm PT"  # human-readable time (e.g., "9:00 am - 4:30 pm")
-startdate: "2022-04-11"  # use YYYY-MM-DD format like "2015-01-01"
-enddate: "2022-04-14"  # use YYYY-MM-DD format like" 2015-01-02"
+humandate: "April 18-21, 2022"  # human-readable date (e.g., "Feb 17-18, 2020")
+humantime: "1:00-4:00pm PT"  # human-readable time (e.g., "9:00 am - 4:30 pm")
+startdate: "2022-04-18"  # use YYYY-MM-DD format like "2015-01-01"
+enddate: "2022-04-21"  # use YYYY-MM-DD format like" 2015-01-02"
 days: null
 instructor: ["TBD", "TBD"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["Reid Otsuji (Library)", "Kimberly Thomas(Research ITS)"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 contact: "kkt008@ucsd.edu or rotsuji@ucsd.edu "    # contact email address for workshop organizer, such as "grace@hopper.org"
 etherpad: "TBD" # optional (insert the URL for your Etherpad if you're using one)
-eventbrite:       # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB")
 ---
 <!--
   HEADER (above)
@@ -35,18 +34,6 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   are not using Eventbrite, or leave it in, since it will not be
   displayed if the 'eventbrite' field in the header is not set.
 -->
-{% if page.eventbrite %}
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="248px"
-  scrolling="auto">
-</iframe>
-{% endif %}
-
-<h2 id="general">General Information</h2>
-
 <!--
   INTRODUCTION
 
@@ -190,16 +177,16 @@ change the value of `carpentry` to `incubator`.
 -->
 <h2 id="schedule">Schedule</h2>
 <div class="row">
-  <div>
+  <div>   
     <table class="table">
      <thead><tr> <th><strong>Date</strong></th> <th><strong>Session</strong></th> <th><strong>Topics</strong></th> </tr></thead>
      <tbody>
-      <tr><td>April 11</td><td>Introduction to R - Session 1</td><td>Intro to R & RStudio - basics, data structures, and data import/export</td></tr>
-      <tr><td>April 12</td><td>Introduction to R - Session 2</td><td>dplyr and tidyverse</td></tr>
-      <tr><td>April 13</td><td>Introduction to R - Session 3</td><td>Plotting with ggplot2 and knitr</td></tr>
+      <tr><td>April 18</td><td>Introduction to Python - Session 1</td><td> Jupyter Notebook - Running/Wuitting, Variables and Assignment, Data Types/Type Conversions, Built-in Functions, and Help</td></tr>
+      <tr><td>April 19</td><td>Introduction to Python - Session 2</td><td> Libraries, Writing Functions, Reading/Writing data in Dataframes, and Pandas Dataframes</td></tr>
+      <tr><td>April 20</td><td>Introduction to Python - Session 3</td><td> Plotting, Lists, For Loops, Looping over Datasets, and Conditionals </td></tr>
       <tr><td></td><td>Quiz</td><td> Due next session; posted on Canvas</td></tr>
-      <tr><td>April 14</td><td>Version Control with Git</td><td>Introduction to Git, creating a repository, tracking changes, and collaborating</td></tr>
-     </tbody></table>
+      <tr><td>April 21</td><td>Version Control with Git</td><td>Introduction to Git, Creating a Repository, Tracking Changes, and Collaborating</td></tr>
+     </tbody></table>   
   </div>
 </div>
 </hr>
@@ -218,17 +205,16 @@ change the value of `carpentry` to `incubator`.
   e.g., '2015-06-10-esu'.
 -->
 <h2 id="curriculum">Curriculum</h2>
-<!-- R specific data information begins -->
+<!-- Python specific data information begins -->
 <p id = "curriculum">
-For this workshop we will be referencing the <a href="https://swcarpentry.github.io/r-novice-gapminder/">R for Reproducible Scientific Analysis</a> and <a href="https://swcarpentry.github.io/git-novice/">Version Control with Git</a> Carpentries curricula. 
+For this workshop we will be referencing the <a href="http://swcarpentry.github.io/python-novice-gapminder/">Plotting and Programming in Python</a> and <a href="https://swcarpentry.github.io/git-novice/">Version Control with Git</a> Carpentries curricula. 
 </p>
 
 <h2 id="datasect">Data</h2>
-<!-- R specific data information begins -->
+<!-- Python specific data information begins -->
 <p id = "data">
-We will be using the 5 year <a href="http://www.gapminder.org/data/">gapminder data</a>. You can go ahead and set up a RStudio project and download the data following these <a href="newproject.html">instructions</a>. The CSV can be downloaded from <a href="https://raw.githubusercontent.com/resbaz/r-novice-gapminder-files/master/data/gapminder-FiveYearData.csv">here</a>.
+We will be using the 5 year <a href="http://swcarpentry.github.io/python-novice-gapminder/files/python-novice-gapminder-data.zip">gapminder data</a>. Please download the gapminder data prior to start of first session.
 </p>
-<!-- R specific data information ends -->
 
 </hr>
 
@@ -258,59 +244,78 @@ We will be using the 5 year <a href="http://www.gapminder.org/data/">gapminder d
   access to the software described below. In addition, you will
   need an up-to-date web browser.
 </p>
-<!-- Start of 'R' section. -->
-<div id="r">
-  <h3>R</h3>
+<!-- Start of 'Python' section. -->
+<div id="python">
+  <h3>Python</h3>
   <p>
-    <a href="https://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
-    <a href="https://www.rstudio.com/">RStudio</a>.
+    We will teach Python using the <a href="https://jupyter.org/">Jupyter Notebook</a>,
+    a programming environment that runs in a web browser (Jupyter Notebook will be installed by Anaconda). For this to work you will need a reasonably
+    up-to-date browser. The current versions of the Chrome, Safari and
+    Firefox browsers are all
+    <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">supported</a>
+    (some older browsers, including Internet Explorer version 9
+    and below, are not).
   </p>
   <div class="tab">
-    <button class="tablinks" onclick="openTab(event,'RWindows')">Windows</button>
-    <button class="tablinks" onclick="openTab(event,'RMacOS')">MacOS</button>
-    <button class="tablinks" onclick="openTab(event,'RLinux')">Linux</button>
+    <button class="tablinks" onclick="openTab(event,'PythonWindows')">Windows</button>
+    <button class="tablinks" onclick="openTab(event,'PythonMacOS')">MacOS</button>
+    <button class="tablinks" onclick="openTab(event,'PythonLinux')">Linux</button>
   </div>
-  <div id="RWindows" class="tabcontent">
-    <p>
-      Install R by downloading and running
-      <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-      from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-      Also, please install the
-      <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-      Note that if you have separate user and admin accounts, you should run the
-      installers as administrator (right-click on .exe file and select "Run as
-      administrator" instead of double-clicking). Otherwise problems may occur later,
-      for example when installing R packages.
-    </p>
-    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/q0PjTAylwoU">SWC R Install Windows</a></p>
+  <div id="PythonWindows" class="tabcontent">
+    <ol>
+      <li>Open <a href="https://www.anaconda.com/products/individual#download-section">https://www.anaconda.com/products/individual#download-section</a> with your web browser.</li>
+      <li>Download the Anaconda for Windows installer with Python 3. (If you are not sure which version to choose, you probably want the 64-bit Graphical Installer <em>Anaconda3-...-Windows-x86_64.exe</em>)</li>
+      <li>Install Python 3 by running the Anaconda Installer, using all of the defaults for installation <em>except</em> make sure to check <strong>Add Anaconda to my PATH environment variable</strong>.</li>
+    </ol>
+    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/xxQ0mzZ8UvA">SWC Install Python on Windows</a></p>
   </div>
-  <div id="RMacOS" class="tabcontent">
-    <p>
-      Install R by downloading and running
-      <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-      from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-      Also, please install the
-      <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-    </p>
-    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/5-ly3kyxwEg">SWC R Install Mac</a></p>     
+  <div id="PythonMacOS" class="tabcontent">
+    <ol>
+      <li>Open <a href="https://www.anaconda.com/products/individual#download-section">https://www.anaconda.com/products/individual#download-section</a> with your web browser.</li>
+      <li>Download the Anaconda Installer with Python 3 for macOS (you can either use the Graphical or the Command Line Installer).</li>
+      <li>Install Python 3 by running the Anaconda Installer using all of the defaults for installation.</li>
+    </ol>
+    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/TcSAln46u9U">SWC Install Python on Mac</a></p>     
   </div>
-  <div id="RLinux" class="tabcontent">
-    <p>
-      Instructions for R installation on various Linux platforms (debian,
-      fedora, redhat, and ubuntu) can be found at
-      <https://cran.r-project.org/bin/linux/>. These will instruct you to
-      use your package manager (e.g. for Fedora run
-      <code>sudo dnf install R</code> and for Debian/Ubuntu, add a ppa
-      repository and then run <code>sudo apt-get install r-base</code>).
-      Also, please install the
-      <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-    </p>
+  <div id="PythonLinux" class="tabcontent">
+    <ol>
+      <li>Open <a href="https://www.anaconda.com/products/individual#download-section">https://www.anaconda.com/products/individual#download-section</a> with your web browser.</li>
+      <li>Download the Anaconda Installer with Python 3 for Linux.<br>
+        (The installation requires using the shell. If you aren't
+        comfortable doing the installation yourself
+        stop here and request help at the workshop.)
+      </li>
+      <li>
+        Open a terminal window and navigate to the directory where
+        the executable is downloaded (e.g., `cd ~/Downloads`).
+      </li>
+      <li>
+        Type <pre>bash Anaconda3-</pre> and then press
+        <kbd>Tab</kbd> to autocomplete the full file name. The name of
+        file you just downloaded should appear.
+      </li>
+      <li>
+        Press <kbd>Enter</kbd>
+        (or <kbd>Return</kbd> depending on your keyboard).
+        You will follow the text-only prompts.
+        To move through the text, press <kbd>Spacebar</kbd>.
+        Type <code>yes</code> and press enter to approve the license.
+        Press <kbd>Enter</kbd> (or <kbd>Return</kbd>)
+        to approve the default location
+        for the files.
+        Type <code>yes</code> and press
+        <kbd>Enter</kbd> (or <kbd>Return</kbd>)
+        to prepend Anaconda to your <code>PATH</code>
+        (this makes the Anaconda distribution the default Python).
+      </li>
+      <li>
+        Close the terminal window.
+      </li>
+    </ol>
   </div>
 </div>
 
-<!-- End of 'R' section. -->
+<!-- End of 'Python' section. -->
 
 <!-- Start of Git section. -->
 <div id="git">
