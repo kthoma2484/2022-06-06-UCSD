@@ -6,14 +6,14 @@ venue: "UC San Diego"      # brief name of host site without address (e.g., "Eup
 address: "Virtual (via Zoom)"    # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
 country: "us"    # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "en"   # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "32.885125,-117.241173"     # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
-humandate: "April 18-21, 2022"  # human-readable date (e.g., "Feb 17-18, 2020")
+latlng: "null"     # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
+humandate: "June 6-9, 2022"  # human-readable date (e.g., "Feb 17-18, 2020")
 humantime: "1:00-4:00pm PT"  # human-readable time (e.g., "9:00 am - 4:30 pm")
-startdate: "2022-04-18"  # use YYYY-MM-DD format like "2015-01-01"
-enddate: "2022-04-21"  # use YYYY-MM-DD format like" 2015-01-02"
+startdate: "2022-06-06"  # use YYYY-MM-DD format like "2015-01-01"
+enddate: "2022-06-06"  # use YYYY-MM-DD format like" 2015-01-02"
 days: null
-instructor: ["TBD", "TBD"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Reid Otsuji (Library)", "Kimberly Thomas(Research ITS)"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+instructor: ["Kimberly Thomas", "TBD"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Harry Zhou (Research ITS)", "Kimberly Thomas(Research ITS)"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 contact: "kkt008@ucsd.edu or rotsuji@ucsd.edu "    # contact email address for workshop organizer, such as "grace@hopper.org"
 etherpad: "TBD" # optional (insert the URL for your Etherpad if you're using one)
 ---
@@ -151,21 +151,8 @@ Everyone who participates in Carpentries activities is required to conform to th
 
 <h2 id="surveys">Surveys</h2>
 <p>Please be sure to complete these surveys before and after the workshop.</p>
-{% if site.carpentry == "incubator" %}
-<p><a href="{{ site.incubator_pre_survey }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.incubator_post_survey }}">Post-workshop Survey</a></p>
-{% elsif site.incubator_pre_survey or site.incubator_post_survey %}
-<div class="alert alert-danger">
-WARNING: you have defined custom pre- and/or post-survey links for
-a workshop not configured for The Carpentries Incubator
-(the value of `curriculum` is not set to `incubator` in `_config.yml`).
-Please comment out the `incubator_pre_survey` and `incubator_post_survey` fields
-in `_config.yml` or, if this workshop is teaching a lesson in the Incubator,
-change the value of `carpentry` to `incubator`.
-</div>
-{% else %}
-<p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
+<p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 {% endif %}
 
 <hr/>
@@ -181,11 +168,11 @@ change the value of `carpentry` to `incubator`.
     <table class="table">
      <thead><tr> <th><strong>Date</strong></th> <th><strong>Session</strong></th> <th><strong>Topics</strong></th> </tr></thead>
      <tbody>
-      <tr><td>April 18</td><td>Introduction to Python - Session 1</td><td> Jupyter Notebook - Running/Wuitting, Variables and Assignment, Data Types/Type Conversions, Built-in Functions, and Help</td></tr>
-      <tr><td>April 19</td><td>Introduction to Python - Session 2</td><td> Libraries, Writing Functions, Reading/Writing data in Dataframes, and Pandas Dataframes</td></tr>
-      <tr><td>April 20</td><td>Introduction to Python - Session 3</td><td> Plotting, Lists, For Loops, Looping over Datasets, and Conditionals </td></tr>
+      <tr><td>June 6</td><td>Introduction to Python - Session 1</td><td> Jupyter Notebook - Running/Wuitting, Variables and Assignment, Data Types/Type Conversions, Built-in Functions, and Help</td></tr>
+      <tr><td>June 7</td><td>Introduction to Python - Session 2</td><td> Libraries, Writing Functions, Reading/Writing data in Dataframes, and Pandas Dataframes</td></tr>
+      <tr><td>June 8</td><td>Introduction to Python - Session 3</td><td> Plotting, Lists, For Loops, Looping over Datasets, and Conditionals </td></tr>
       <tr><td></td><td>Quiz</td><td> Due next session; posted on Canvas</td></tr>
-      <tr><td>April 21</td><td>Version Control with Git</td><td>Introduction to Git, Creating a Repository, Tracking Changes, and Collaborating</td></tr>
+      <tr><td>June 8</td><td>Version Control with Git</td><td>Introduction to Git, Creating a Repository, Tracking Changes, and Collaborating</td></tr>
      </tbody></table>   
   </div>
 </div>
